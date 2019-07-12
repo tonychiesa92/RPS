@@ -1,0 +1,20 @@
+#paper {
+    background-image: url('../images/paper.png');
+    background-size: 100px 100px;
+    height: 104px;  
+    width: 104px;
+  }
+  
+#rock {
+    background-image: url('../images/rock.png');
+    background-size: 100px 100px;
+    height: 104px;  
+    width: 104px;
+  }
+  
+#scissors {
+    background-image: url('../images/scissors.png');
+    background-size: 100px 100px;
+    height: 104px;  
+    width: 104px;
+  }

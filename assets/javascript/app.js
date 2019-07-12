@@ -1,4 +1,21 @@
- // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+var config = {
+  apiKey: "AIzaSyDMBczJMjHQs-XeGnUYywIk8MFGx7U02fQ",
+  authDomain: "rock-paper-scissors-b3c72.firebaseapp.com",
+  databaseURL: "https://rock-paper-scissors-b3c72.firebaseio.com",
+  projectId: "rock-paper-scissors-b3c72",
+  storageBucket: "",
+  messagingSenderId: "468600835025",
+  appId: "1:468600835025:web:5c1be6a2b27d0d2d"
+};
+// Initialize Firebase
+firebase.initializeApp(config);
+
+
+
+
+
+//ORIGINAL RPS GAME VS COMPUTER
+// Creates an array that lists out all of the options (Rock, Paper, or Scissors).
  var computerChoices = ["r", "p", "s"];
 
  // Creating variables to hold the number of wins, losses, and ties. They start at 0.
