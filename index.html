@@ -14,23 +14,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
 
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!-- BOOTSTRAP & Custom CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- LINK FOR FIREBASE -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -39,6 +41,38 @@
         </div>
     </div>
 
+    <div class="col-lg-6">
+        <div class="card card-default">
+            <div class="card-header">
+                Login
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group col-6">
+                        <label for="displayname">Username</label>
+                        <input type="name" class="form-control" id="entry-displayname" aria-describedby="nameHelp"
+                            placeholder="Enter Name">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="entry-email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="entry-password" aria-describedby="dateHelp"
+                            placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ORIGINAL RPS GAME VS COMPUTER
     <div>
         <p id="directions-text">Press r, p or s to start playing!</p>
         <p id="userchoice-text"></p>
@@ -50,7 +84,9 @@
 
     <button class="throw-option" id="paper"></button>
     <button class="throw-option" id="rock"></button>
-    <button class="throw-option" id="scissors"></button>
+    <button class="throw-option" id="scissors"></button> -->
+
+
 
     <script src="assets/javascript/app.js" async defer></script>
 </body>
