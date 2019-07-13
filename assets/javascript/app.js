@@ -36,7 +36,8 @@ $(".btn").on("click", function (event) {
   $("#entry-email").val("");
   $("#entry-password").val("");
 
-  document.body.innerHTML="";
+  //document.body.innerHTML="";
+  window.location="./gameboard.html";
 });
 
 /*
