@@ -15,8 +15,10 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 // Global var
-var currentUser;
+var currentUser = "";
+var pointer = {};
 
+// LOGIN BUTTON
 $("#submit-login").on("click", function (event) {
   event.preventDefault();
 
@@ -29,12 +31,12 @@ $("#submit-login").on("click", function (event) {
   //   user.updateProfile({displayName:displayName.value});
   // });
 
-  database.ref().push({
+  pointer = database.ref().push({
     displayName: displayName,
     email: email,
     password: password
   });
-
+  console.log(pointer);
   $("#entry-displayname").val("");
   $("#entry-email").val("");
   $("#entry-password").val("");
@@ -44,10 +46,10 @@ $("#submit-login").on("click", function (event) {
 
 
 
-
+// CHAT BUTTON
 $("#send-message").on("click", function (event) {
   event.preventDefault();
-  alert(currentUser);
+  
  
   comment = $("#comment-input").val().trim();
    comment = currentUser + " " + comment;
@@ -69,7 +71,11 @@ database.ref().on("child_added", function (childSnapshot) {
   console.log("Errors handled: " + errorObject.code);
 });
 
-
+// CREATE NEW GAME BUTTON
+$("#create-game-button").on("click", function(){
+  
+  $("#game-waiting").text("Tony wants to play a game.");
+});
 
 
 /*

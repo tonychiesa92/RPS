@@ -41,65 +41,55 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-header">
-                    Group Chat
-                </div>
-
-                <div class="card-body">
-                    <form role="form">
-                        <div class="form-group row">
-                            <label for="comment-input">Type here</label>
-                            <textarea class="form-control" id="comment-input" rows="3"></textarea>
-                        </div>
-                        <button class="btn btn-primary" id="send-message" type="submit">Submit</button>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-header">
-                    Chat
-                </div>
-                <div class="card-body">
-                    <div id="chat-box"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
 
 
     <div class="container">
-        <div class="jumbotron bg-white">
 
-            <div class="row">
 
-                
+        <div class="row">
+            <div class="col-3">
 
-                <div class="col-4">
-                    <h2 class="font-weight-bold">Create/Join Games</h2>
-                    <hr>
-                    <div class="row" id="join-game">
-                        <button type="button" class="btn btn-primary" id="creat-game-button">Create Game</button>
+                <h2 class="font-weight-bold">Chat</h2>
+                <hr>
+                <div class="card-body">
+                    <div id="chat-box"></div>
+                </div>
+
+                <div class="card">
+
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="comment-input">Type here</label>
+                                <textarea class="form-control" id="comment-input" rows="3"></textarea>
+                            </div>
+                            <button class="btn btn-primary" id="send-message" type="submit">Submit</button>
+                        </form>
+
                     </div>
                 </div>
 
-                <div class="col-4">
-                    <h2 class="font-weight-bold">Current Game</h2>
-                    <hr>
-                    <div class="row" id="current-game"></div>
+            </div>
+
+
+            <div class="col-3">
+                <h2 class="font-weight-bold">Create/Join Games</h2>
+                <hr>
+                <div class="row" id="join-game">
+                    <button type="button" class="btn btn-primary" id="create-game-button">Create Game</button>
+                    <div id="game-waiting"></div>
                 </div>
 
             </div>
+
+            <div class="col-6">
+                <h2 class="font-weight-bold">Current Game</h2>
+                <hr>
+                <div class="row" id="current-game"></div>
+            </div>
+
         </div>
+
 
     </div>
 
