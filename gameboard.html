@@ -2,16 +2,19 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-        <!-- JQuery -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- BOOTSTRAP & Custom CSS -->
@@ -24,19 +27,88 @@
     <!-- Specific Firebase products we want (Database) -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Rock Paper Scissors</h1>
-                <p class="lead">The best online multiplayer Rock Paper Scissors game on the web!</p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Rock Paper Scissors</h1>
+            <p class="lead">The best online multiplayer Rock Paper Scissors game on the web!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Group Chat
+                </div>
+
+                <div class="card-body">
+                    <form role="form">
+                        <div class="form-group row">
+                            <label for="comment-input">Type here</label>
+                            <textarea class="form-control" id="comment-input" rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" id="send-message" type="submit">Submit</button>
+                    </form>
+
+                </div>
             </div>
         </div>
-        
-        <script src="assets/javascript/app.js" async defer></script>
-    </body>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    Chat
+                </div>
+                <div class="card-body">
+                    <div id="chat-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="jumbotron bg-white">
+
+            <div class="row">
+
+                
+
+                <div class="col-4">
+                    <h2 class="font-weight-bold">Create/Join Games</h2>
+                    <hr>
+                    <div class="row" id="join-game">
+                        <button type="button" class="btn btn-primary" id="creat-game-button">Create Game</button>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <h2 class="font-weight-bold">Current Game</h2>
+                    <hr>
+                    <div class="row" id="current-game"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="assets/javascript/app.js" async defer></script>
+</body>
+
 </html>

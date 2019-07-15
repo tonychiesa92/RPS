@@ -14,13 +14,16 @@ firebase.initializeApp(firebaseConfig);
 // Create a variable to reference the database
 var database = firebase.database();
 
+// Global var
+var currentUser;
 
-$(".btn").on("click", function (event) {
+$("#submit-login").on("click", function (event) {
   event.preventDefault();
 
   var displayName = $("#entry-displayname").val().trim();
   var email = $("#entry-email").val().trim();
   var password = $("#entry-password").val().trim();
+  currentUser = displayName;
 
   // firebase.auth().createUserWithEmailAndPassword(email.value, password.vaule).then(function(user){
   //   user.updateProfile({displayName:displayName.value});
@@ -36,9 +39,38 @@ $(".btn").on("click", function (event) {
   $("#entry-email").val("");
   $("#entry-password").val("");
 
-  //document.body.innerHTML="";
-  window.location="./gameboard.html";
+  window.location = "./gameboard.html";
 });
+
+
+
+
+$("#send-message").on("click", function (event) {
+  event.preventDefault();
+  alert(currentUser);
+ 
+  comment = $("#comment-input").val().trim();
+   comment = currentUser + " " + comment;
+  
+  database.ref().push({
+    
+    comment: comment,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP
+  });
+
+  $("#comment-input").val("");
+});
+
+database.ref().on("child_added", function (childSnapshot) {
+  
+  $("#chat-box").append("<div class='well'><span class='member-comment'> " + childSnapshot.val().comment + " </span></div>");
+
+}, function (errorObject) {
+  console.log("Errors handled: " + errorObject.code);
+});
+
+
+
 
 /*
 login page
